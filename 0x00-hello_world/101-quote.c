@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-/*
+/**
  * main - A programme that prints exactly
  * Return: 1
  */
