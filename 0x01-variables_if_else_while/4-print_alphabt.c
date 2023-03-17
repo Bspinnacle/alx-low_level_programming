@@ -1,30 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - A program that prints if the number is +ve, or -ve
+ * main - A program that prints alphabets in lower case and upper case
  * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int n;
+	char alph;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-
-	if (n > 0)
+	for (alph = 'a'; alph <= 'z'; alph++)
 	{
-		printf("%d is positive\n", n);
-	}
-	else if (n < 0)
-	{
-		printf("%d is negative\n", n);
-	}
-	else
-	{
-		printf("%d is zero\n", n);
+		if (alph != 'e' && alph != 'q')
+			putchar(alph);
 	}
 
 	return (0);
