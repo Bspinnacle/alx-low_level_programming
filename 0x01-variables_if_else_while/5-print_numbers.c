@@ -1,31 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - A program that prints if the number is +ve, or -ve
+ * main - A program that prints numbers lesser than 10
  * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int n;
+	int num;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-
-	if (n > 0)
-	{
-		printf("%d is positive\n", n);
-	}
-	else if (n < 0)
-	{
-		printf("%d is negative\n", n);
-	}
-	else
-	{
-		printf("%d is zero\n", n);
-	}
+	for (num = 0; num < 10; num++)
+		printf("%d", num);
+		
+	printf("\n");
 
 	return (0);
 }
