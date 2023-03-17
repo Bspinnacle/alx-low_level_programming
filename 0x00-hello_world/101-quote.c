@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /*
- * main - Entry
+ * main - A programme that prints exactly
  * Return: 1
  */
 int main(void)
