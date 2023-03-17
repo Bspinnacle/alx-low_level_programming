@@ -1,7 +1,6 @@
 #include <stdio.h>
-/*
- * main - Entry point
- * Description: A program to print size
+/**
+ * main - A program that prints the size of computers
  * Return: Always 0 (success)
  */
 int main(void)
