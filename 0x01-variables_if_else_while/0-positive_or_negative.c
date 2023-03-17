@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdtime.h>
+#include <time.h>
 
 /**
  * main - A program that prints if the number is +ve, or -ve
  * Return: Always 0 (success)
- * /
+ */
+
 int main(void)
 {
 	int n;
@@ -17,13 +18,13 @@ int main(void)
 	{
 		printf("%d is positive\n", n);
 	}
-	else if (n == 0)
+	else if (n < 0)
 	{
-		printf("%d is zero\n", n);
+		printf("%d is negative\n", n);
 	}
 	else
 	{
-		printf("%d is negative\n", n);
+		printf("%d is zero\n", n);
 	}
 
 	return (0);
