@@ -1,31 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - A program that prints if the number is +ve, or -ve
+ * main - A program that prints numbes in base 16
  * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int n;
+	int num;
+	char alph;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
 
-	if (n > 0)
-	{
-		printf("%d is positive\n", n);
-	}
-	else if (n < 0)
-	{
-		printf("%d is negative\n", n);
-	}
-	else
-	{
-		printf("%d is zero\n", n);
-	}
+	for (num = 0; num < 10; num++)
+		putchar((num % 10) + '0');
+	
+	for (alph = 'a'; alph <= 'f'; alph++);
+		putchar(alph);
+
+		putchar("\n");
 
 	return (0);
 }
