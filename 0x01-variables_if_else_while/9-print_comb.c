@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
  * main - A program that prints if the number is +ve, or -ve
