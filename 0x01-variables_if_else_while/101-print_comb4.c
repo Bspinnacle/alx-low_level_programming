@@ -3,29 +3,35 @@
 #include <time.h>
 
 /**
- * main - A program that prints if the number is +ve, or -ve
+ * main - A program that prints all possible combinations of three different digits.
  * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int n;
+	int a, b, c;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
+	for (a = 0; a <= 9; a++)
+	{
 
-	if (n > 0)
+	for (b = a + 1; b <= 9; b++)
 	{
-		printf("%d is positive\n", n);
-	}
-	else if (n < 0)
-	{
-		printf("%d is negative\n", n);
-	}
-	else
-	{
-		printf("%d is zero\n", n);
-	}
 
+	for (c = b + 1; c <= 9; c++)
+	{
+	if ((a != b) != c)
+	{
+	putchar(a);
+	putchar(b);
+	putchar(c);
+	if (a == 7 && b == 8)
+	continue;
+	putchar(',');
+	putchar(' ');
+	}
+	}
+	}
+	}
+	putchar('\n');
 	return (0);
 }
