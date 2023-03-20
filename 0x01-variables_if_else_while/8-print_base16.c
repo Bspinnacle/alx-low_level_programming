@@ -10,9 +10,9 @@ int main(void)
 	int a;
 	char la;
 
-	for (a = '0'; a < '10'; a++)
+	for (a = '0'; a <= '9'; a++)
 	putchar(a);
-	
+
 	for (la = 'a'; la <= 'f'; la++);
 	putchar(la);
 	putchar('\n');
