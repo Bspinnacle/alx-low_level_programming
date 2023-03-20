@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - A program that prints all possible combinations of three different digits.
+ * main - A program that prints combinations of three different digits.
  * Return: Always 0 (success)
  */
 
@@ -24,7 +24,7 @@ int main(void)
 	putchar(a);
 	putchar(b);
 	putchar(c);
-	if (a == 7 && b == 8)
+	if (a == '7' && b == '8')
 	continue;
 	putchar(',');
 	putchar(' ');
