@@ -3,29 +3,30 @@
 #include <time.h>
 
 /**
- * main - A program that prints if the number is +ve, or -ve
+ * main - A program that prints all possible combinations of two two-digits.
  * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int n;
+	int a, b;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
+	for (a = '0'; a < '9'; a++)
+	{
 
-	if (n > 0)
+	for (b = a + 1; b <= '9'; b++)
 	{
-		printf("%d is positive\n", n);
-	}
-	else if (n < 0)
+	if (b != a)
 	{
-		printf("%d is negative\n", n);
+	putchar(a);
+	putchar(b);
+	if (a == '8' && b == '9')
+	continue;
+	putchar(',');
+	putchar(' ');
 	}
-	else
-	{
-		printf("%d is zero\n", n);
 	}
-
+	}
+	putchar('\n');
 	return (0);
 }
