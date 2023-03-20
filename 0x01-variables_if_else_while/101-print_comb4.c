@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - A program that prints combinations of three different digits.
+ * main - A program that prints all possible combinations of three digits.
  * Return: Always 0 (success)
  */
 
@@ -11,14 +11,12 @@ int main(void)
 {
 	int a, b, c;
 
-	for (a = 0; a < '9'; a++)
+	for (a = '0'; a < '9'; a++)
 	{
 
 	for (b = a + 1; b <= '9'; b++)
 	{
-
-	for (c = b + 1; c <= '9'; c++)
-	{
+	for (b = a + 1; b <= '9'; b++)
 	if ((b != a) != c)
 	{
 	putchar(a);
