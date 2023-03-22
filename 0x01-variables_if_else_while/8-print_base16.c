@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - A program that prints numbes in base 16
@@ -8,13 +9,17 @@
 int main(void)
 {
 	int a;
-	char le;
+	char alph;
 
 	for (a = '0'; a <= '9'; a++)
+	{
 	putchar(a);
+	}
 
-	for (le = 'a'; le <= 'f'; le++);
-	putchar(le);
+	for (alph = 'a'; alph <= 'f'; alph++)
+	{
+	putchar(alph);
+	}
 	putchar('\n');
 
 	return (0);
