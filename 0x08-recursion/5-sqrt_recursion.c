@@ -19,7 +19,7 @@ int _sqrt_recursion(int n)
  * natural square root of a number
  * @n: number whose square root is to be calculated
  * @r: input
- * Return: -1 if n does not have a natural square root
+ * Return: the natural square root
  */
 
 int actual_sqrt_recursion(int n, int r)
@@ -27,6 +27,6 @@ int actual_sqrt_recursion(int n, int r)
 	if (r * r > n)
 	return (-1);
 	if (r * r == n)
-	return (1);
+	return (r);
 	return (actual_sqrt_recursion(n, r + 1));
 }
