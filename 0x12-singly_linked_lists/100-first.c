@@ -1,12 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+void print_before(void) __attribute__ ((constructor));
 
 /**
- * main - check the code
+ *  print_before - a function that prints You're beat! and yet, you
+ *  must allow,\nI bore my house upon my back!\n before
+ *  the main function is executed
  *
- * Return: Always 0.
+ * Return: Always 0
  */
-int main(void)
+
+void print_before(void)
 {
-    printf("(A tortoise, having pretty good sense of a hare's nature, challenges one to a race.)\n");
-    return (0);
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
