@@ -6,7 +6,7 @@
  * free_list - a function that frees a list_t list
  * @head: The beginning of list
  *
- * Return: Always 0
+ * Return: no return
  */
 
 void free_list(list_t *head)
@@ -16,8 +16,8 @@ void free_list(list_t *head)
 	while ((node = head) != NULL)
 	{
 		head = head->next;
-		free(node);
 		free(node->str);
+		free(node);
 
 	}
 }
