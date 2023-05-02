@@ -27,7 +27,7 @@ listint_t *find_listint_loop(listint_t *head)
 	if (node == loop)
 		{
 		loop = head;
-		if (loop != node)
+		while (loop != node)
 			{
 			loop = loop->next;
 			node = node->next;
