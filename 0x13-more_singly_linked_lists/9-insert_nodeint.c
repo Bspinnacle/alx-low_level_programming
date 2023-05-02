@@ -5,10 +5,10 @@
 /**
  * insert_nodeint_at_index -  a function that inserts a
  * new node at a given position
- * @head: pointer to the first node in the list
+ * @head: the beginning of listint_t list
  * @idx:  the index of the list where the new node should be added.
  * Index starts at 0
- * @n: data to insert in the new node
+ * @n: string to be inserted in the new node
  *
  * Return:  the address of the new node, or NULL if it fails
  */
