@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -11,7 +9,7 @@
  * one number to another
  */
 
-int flip_bits(unsigned long int *n, unsigned long int m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int i, count = 0;
 
