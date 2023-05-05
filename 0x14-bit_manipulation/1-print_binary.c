@@ -11,11 +11,27 @@
 void print_binary(unsigned long int n)
 {
 
-	if (n >> 0)
+	int i;
+	int count = 0;
+
+	unsigned long int decimal;
+
+	for (i = 63; i >= 0; i--)
+
 	{
-	print_binary(n);
-	_putchar(n);
+	decimal = n >> i;
+
+	if (decimal & 1)
+		{
+		_putchar('1');
+		count++;
+		}
+	else
+		if (count)
+		_putchar ('0');
+
 	}
+		if (!count)
+		_putchar ('0');
 
 }
-
