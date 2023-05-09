@@ -84,8 +84,7 @@ int main(int argc, char *argv[])
 	}
 	r = read(from, bytes, 1024);
 	to = open(argv[2], O_WRONLY | O_APPEND);
-	}
-	while (r > 0);
+	} while (r > 0);
 
 	free(bytes);
 	close_descr(from);
