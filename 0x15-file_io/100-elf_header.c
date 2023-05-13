@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 void check_elf(unsigned char *e_ident);
 /**
@@ -145,15 +144,15 @@ void print_version(unsigned char *e_ident)
 	}
 }
 
-void print_os_abi(unsigned char *e_ident);
+void print_osabi(unsigned char *e_ident);
 /**
-* print_os_abi - a function that prints the OS/ABI of an ELF header
+* print_osabi - a function that prints the OS/ABI of an ELF header
 * @e_ident: an array of bytes
 *
 * Return: no return
 */
 
-void print_os_abi(unsigned char *e_ident)
+void print_osabi(unsigned char *e_ident)
 {
 	printf("OS/ABI: ");
 
@@ -346,7 +345,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_class(header->e_ident);
 	print_data(header->e_ident);
 	print_version(header->e_ident);
-	print_os_abi(header->e_ident);
+	print_osabi(header->e_ident);
 	print_abi(header->e_ident);
 	print_type(header->e_type, header->e_ident);
 	print_entry(header->e_entry, header->e_ident);
