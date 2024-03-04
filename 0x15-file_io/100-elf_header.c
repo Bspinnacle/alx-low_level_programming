@@ -135,7 +135,7 @@ void print_version(unsigned char *e_ident)
 	switch (e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
-		printf("current\n");
+		printf("(current)\n");
 		break;
 
 	default:
@@ -168,39 +168,39 @@ void print_osabi(unsigned char *e_ident)
 		break;
 
 		case ELFOSABI_NETBSD:
-		printf("UNIX - NetBSD\n");
+		printf("	UNIX - NetBSD\n");
 		break;
 
 		case ELFOSABI_LINUX:
-		printf("linux ABI\n");
+		printf("	linux ABI\n");
 		break;
 
 		case ELFOSABI_SOLARIS:
-		printf("UNIX - Solaris\n");
+		printf("	UNIX - Solaris\n");
 		break;
 
 		case ELFOSABI_IRIX:
-		printf("IRIX ABI\n");
+		printf("	IRIX ABI\n");
 		break;
 
 		case ELFOSABI_FREEBSD:
-		printf("FreeBSD ABI\n");
+		printf("	FreeBSD ABI\n");
 		break;
 
 		case ELFOSABI_TRU64:
-		printf("TRU64 UNIX ABI\n");
+		printf("	TRU64 UNIX ABI\n");
 		break;
 
 		case ELFOSABI_ARM:
-		printf("ARM Architecture ABI\n");
+		printf("	ARM Architecture ABI\n");
 		break;
 
 		case ELFOSABI_STANDALONE:
-		printf("Stand-alone (embedded) ABI\n");
+		printf("	Stand-alone (embedded) ABI\n");
 		break;
 
 	default:
-	printf("<unknown class: %x>\n", e_ident[EI_OSABI]);
+	printf("		<unknown class: %x>\n", e_ident[EI_OSABI]);
 	}
 }
 
@@ -214,7 +214,7 @@ void print_abi(unsigned char *e_ident);
 
 void print_abi(unsigned char *e_ident)
 {
-	printf("ABI Version: %d\n",
+	printf("ABI Version: 		%d\n",
 	e_ident[EI_ABIVERSION]);
 }
 
@@ -232,27 +232,27 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	e_type >>= 8;
 
-	printf("Type: ");
+	printf("Type: 			");
 
 	switch (e_type)
 	{
 	case ET_NONE:
-		printf("NONE - An unknown type\n");
+		printf("		NONE - An unknown type\n");
 		break;
 	case ET_REL:
-		printf("REL - A relocatable file\n");
+		printf("		REL - A relocatable file\n");
 		break;
 	case ET_EXEC:
-		printf("EXEC (Executable file)\n");
+		printf("		EXEC (Executable file)\n");
 		break;
 	case ET_DYN:
-		printf("DYN - A Shared object file\n");
+		printf("		DYN - A Shared object file\n");
 		break;
 	case ET_CORE:
-		printf("CORE - A core file)\n");
+		printf("		CORE - A core file)\n");
 		break;
 	default:
-		printf("<unknown class: %x>\n", e_type);
+		printf("<unknown class: 	%x>\n", e_type);
 	}
 }
 
@@ -267,7 +267,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
-	printf("Elf header entry address: ");
+	printf("Entry point address: ");
 
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
