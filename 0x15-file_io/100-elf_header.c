@@ -106,11 +106,11 @@ void print_data(unsigned char *e_ident)
 		break;
 
 		case ELFDATA2LSB:
-		printf("Complement of twos, little endian\n");
+		printf("2's Complement, little endian\n");
 		break;
 
 		case ELFDATA2MSB:
-		printf("Complement of twos, big endian\n");
+		printf("2's complement, big endian\n");
 		break;
 
 	default:
@@ -160,7 +160,7 @@ void print_osabi(unsigned char *e_ident)
 
 	{
 		case ELFOSABI_NONE:
-		printf("UNIX System V ABI\n");
+		printf("UNIX - System V\n");
 		break;
 
 		case ELFOSABI_HPUX:
@@ -168,15 +168,15 @@ void print_osabi(unsigned char *e_ident)
 		break;
 
 		case ELFOSABI_NETBSD:
-		printf("NetBSD ABI\n");
+		printf("UNIX - NetBSD\n");
 		break;
 
 		case ELFOSABI_LINUX:
-		printf("inux ABI\n");
+		printf("linux ABI\n");
 		break;
 
 		case ELFOSABI_SOLARIS:
-		printf("Solaris ABI\n");
+		printf("UNIX - Solaris\n");
 		break;
 
 		case ELFOSABI_IRIX:
@@ -243,7 +243,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 		printf("REL - A relocatable file\n");
 		break;
 	case ET_EXEC:
-		printf("EXEC - An executable file\n");
+		printf("EXEC (Executable file)\n");
 		break;
 	case ET_DYN:
 		printf("DYN - A Shared object file\n");
