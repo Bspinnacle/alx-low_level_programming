@@ -42,7 +42,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int id;
 
-	printf("Magic: 		");
+	printf("Magic:		");
 
 	for (id = 0; id < EI_NIDENT; id++)
 	{
@@ -214,7 +214,7 @@ void print_abi(unsigned char *e_ident);
 
 void print_abi(unsigned char *e_ident)
 {
-	printf("ABI Version: 		%d\n",
+	printf("ABI Version:		%d\n",
 	e_ident[EI_ABIVERSION]);
 }
 
@@ -232,7 +232,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	e_type >>= 8;
 
-	printf("Type: 			");
+	printf("Type:			");
 
 	switch (e_type)
 	{
@@ -252,7 +252,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 		printf("		CORE - A core file)\n");
 		break;
 	default:
-		printf("<unknown class: 	%x>\n", e_type);
+		printf("<unknown class:		%x>\n", e_type);
 	}
 }
 
